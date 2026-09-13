@@ -1,0 +1,145 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  font-family: "Inter", sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-links a:hover {
+  opacity: 0.6;
+}
+
+/* ===========================
+   SECCIONES
+=========================== */
+
+section {
+  min-height: calc(100vh - 80px); /* ← CORREGIDO */
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+  width: 100%;
+  padding: 25px 40px;     /* súper compacto */
+  background-color: #0a0a0a;
+  text-align: center;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.footer-title {
+  font-size: 1.2rem;      /* más pequeño */
+  margin-bottom: 10px;    /* menos espacio */
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 28px;        /* antes 15px → iconos más separados */
+  margin-bottom: 18px;   /* más espacio antes del texto */
+}
+
+.footer-socials img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+}
+
+
+.icon {
+  width: 28px;
+  height: 28px;
+  filter: invert(100%);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon.infojobs {
+  filter: invert(100%) saturate(0%) brightness(200%);
+}
+
+
+.footer-copy {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 20px; /* más separación respecto a los iconos */
+}
+.contact-line {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #cfcfcf;
+  opacity: 0.85;
+  text-align: center;
+}
+
+.contact-line a {
+  color: #3b82f6; /* azul suave, queda perfecto debajo de los iconos */
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.contact-line a:hover {
+  opacity: 1;
+  text-shadow: 0 0 6px #3b82f6;
+}

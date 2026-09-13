@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies - Dani.dev</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/hobbies.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-logo">Dani.dev</div>
+
+    <nav>
+      <ul class="navbar-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===========================
+       HOBBIES
+  ============================ -->
+  <section id="hobbies" class="hobbies">
+
+    <div class="hobbies-layout">
+
+      <!-- Filtros laterales -->
+      <div class="hobbies-filtros">
+        <ul>
+          <li>
+            <a href="#games" class="filtro-btn filtro-games">
+              <div class="filtro-inner">
+                <div class="filtro-front">#games</div>
+                <div class="filtro-back">#games</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#deportes" class="filtro-btn filtro-deportes">
+              <div class="filtro-inner">
+                <div class="filtro-front">#deportes</div>
+                <div class="filtro-back">#deportes</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#musica" class="filtro-btn filtro-musica">
+              <div class="filtro-inner">
+                <div class="filtro-front">#musica</div>
+                <div class="filtro-back">#musica</div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#cine" class="filtro-btn filtro-cine">
+              <div class="filtro-inner">
+                <div class="filtro-front">#cine</div>
+                <div class="filtro-back">#cine</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contenido -->
+      <div class="hobbies-contenido">
+
+        <!-- GAMES -->
+        <section id="games" class="hobby-section">
+          <h2>Games</h2>
+          <p>Estos son unos de mis juegos favoritos.</p>
+
+          <div class="games-list">
+
+            <div class="game-item">
+              <div class="game-logo-box">
+                <img src="../assets/img/chess.svg" class="game-logo">
+              </div>
+              <div class="game-text">
+                <h3>Ajedrez o Chess</h3>
+                <p>Estrategia pura, concentración y táctica.</p>
+              </div>
+            </div>
+
+            <div class="game-item">
+              <div class="game-logo-box">
+                <img src="../assets/img/rocket.png" class="game-logo">
+              </div>
+              <div class="game-text">
+                <h3>Rocket League</h3>
+                <p>Fútbol con coches, mecánicas rápidas y partidas intensas.</p>
+              </div>
+            </div>
+
+            <div class="game-item">
+              <div class="game-logo-box">
+                <img src="../assets/img/ark.png" class="game-logo">
+              </div>
+              <div class="game-text">
+                <h3>Ark Survival Evolved</h3>
+                <p>Supervivencia extrema, dinosaurios, construcción y exploración.</p>
+              </div>
+            </div>
+
+            <div class="game-item">
+              <div class="game-logo-box">
+                <img src="../assets/img/forza.webp" class="game-logo">
+              </div>
+              <div class="game-text">
+                <h3>Forza Horizon 6</h3>
+                <p>Mundo abierto, coches increíbles y conducción arcade espectacular.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- DEPORTES -->
+        <section id="deportes" class="hobby-section">
+          <h2>Deportes</h2>
+          <p>Estos son unos deportes que más me gustan y que he practicado.</p>
+
+          <div class="sports-list">
+
+            <div class="sport-item">
+              <h3>Gym</h3>
+              <p class="sport-text">Actualmente voy al gimnasio ya que es lo que me gusta y también ayuda a tener un mejor estado físico.</p>
+            </div>
+
+            <div class="sport-item">
+              <h3>Basquet</h3>
+              <p class="sport-text">Estuve en un equipo durante 6 años y me llevo muy buenos recuerdos.</p>
+            </div>
+
+            <div class="sport-item">
+              <h3>Fútbol</h3>
+              <p class="sport-text">Suelo jugar con amigos y también me gusta ver partidos.</p>
+            </div>
+
+            <div class="sport-item">
+              <h3>Judo</h3>
+              <p class="sport-text">Hice judo durante toda la primaria y participé en torneos.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- MÚSICA -->
+        <section id="musica" class="hobby-section musica-section">
+          <h2>Música</h2>
+          <p>Estos son algunos de mis cantantes favoritos y mis géneros musicales.</p>
+
+          <div class="music-list">
+
+            <div class="music-item">
+              <a href="https://open.spotify.com/artist/5lwmRuXgjX8xXRRRfCQFCo" target="_blank" class="music-link">
+                <div class="music-logo-box">
+                  <img src="../assets/img/duki.jpg" alt="Duki" class="music-logo">
+                </div>
+                <div class="music-text">
+                  <h3>Duki</h3>
+                  <p>Mauro Lombardo, uno de los artistas más influyentes del trap argentino.</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="music-item">
+              <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank" class="music-link">
+                <div class="music-logo-box">
+                  <img src="../assets/img/badbunny.jpg" alt="Bad Bunny" class="music-logo">
+                </div>
+                <div class="music-text">
+                  <h3>Bad Bunny</h3>
+                  <p>Benito Martínez, uno de los artistas más importantes de la música urbana.</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="music-item">
+              <a href="https://open.spotify.com/artist/1EXjXQpDx2pROygh8zvHs4" target="_blank" class="music-link">
+                <div class="music-logo-box">
+                  <img src="../assets/img/melendi.webp" alt="Melendi" class="music-logo">
+                </div>
+                <div class="music-text">
+                  <h3>Melendi</h3>
+                  <p>Cantautor español con un estilo único dentro del pop urbano.</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+          <h2 style="margin-top:40px;">Géneros musicales</h2>
+
+          <div class="music-genres">
+            <ul class="genres-list">
+              <li class="genre-item">
+                <div class="genre-title">Reggaetón</div>
+                <div class="genre-desc">Ritmos urbanos, energía y baile.</div>
+              </li>
+
+              <li class="genre-item">
+                <div class="genre-title">Trap</div>
+                <div class="genre-desc">Beats pesados y letras directas.</div>
+              </li>
+
+              <li class="genre-item">
+                <div class="genre-title">Pop Urbano</div>
+                <div class="genre-desc">Mezcla de melodías pop con ritmos urbanos.</div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- CINE -->
+        <section id="cine" class="hobby-section cine-section">
+          <h2>Cine, Series y Anime</h2>
+
+          <h3 class="cine-subtitle">Películas y Series</h3>
+
+          <div class="cine-list">
+
+            <div class="cine-item">
+              <div class="cine-cover-box">
+                <img src="../assets/img/intelestelar.jpg" alt="Interstellar" class="cine-cover">
+              </div>
+              <div class="cine-text">
+                <h3>Interstellar</h3>
+                <p>Una historia que mezcla ciencia real, exploración espacial y emociones profundas.</p>
+              </div>
+            </div>
+
+            <div class="cine-item">
+              <div class="cine-cover-box">
+                <img src="../assets/img/jurassic_park.webp" alt="Jurassic Park" class="cine-cover">
+              </div>
+              <div class="cine-text">
+                <h3>Jurassic Park</h3>
+                <p>La saga que revolucionó los efectos especiales y el cine de aventuras.</p>
+              </div>
+            </div>
+
+            <div class="cine-item">
+              <div class="cine-cover-box">
+                <img src="../assets/img/jurassic_world.jpg" alt="Jurassic World" class="cine-cover">
+              </div>
+              <div class="cine-text">
+                <h3>Jurassic World</h3>
+                <p>Una versión moderna y explosiva del universo Jurassic.</p>
+              </div>
+            </div>
+
+            <div class="cine-item">
+              <div class="cine-cover-box">
+                <img src="../assets/img/suits.jpg" alt="Suits" class="cine-cover">
+              </div>
+              <div class="cine-text">
+                <h3>Suits</h3>
+                <p>Serie elegante ambientada en un bufete de Nueva York.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <h3 class="cine-subtitle">Anime</h3>
+
+          <div class="cine-list">
+
+            <div class="cine-item">
+              <div class="cine-cover-box">
+                <img src="../assets/img/black_clover.jpg" alt="Black Clover" class="cine-cover">
+              </div>
+              <div class="cine-text">
+                <h3>Black Clover</h3>
+                <p>Acción, magia y superación personal.</p>
+              </div>
+            </div>
+
+            <div class="cine-item">
+              <div class="cine-cover-box">
+                <img src="../assets/img/aot.webp" alt="Ataque a los Titanes" class="cine-cover">
+              </div>
+              <div class="cine-text">
+                <h3>Ataque a los Titanes</h3>
+                <p>Historia oscura con giros brutales y misterio.</p>
+              </div>
+            </div>
+
+            <div class="cine-item">
+              <div class="cine-cover-box">
+                <img src="../assets/img/jjk.webp" alt="Jujutsu Kaisen" class="cine-cover">
+              </div>
+              <div class="cine-text">
+                <h3>Jujutsu Kaisen</h3>
+                <p>Exorcistas, maldiciones y animación espectacular.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="footer-socials">
+      <a href="https://github.com/dxnyy55" class="social-link">
+        <img src="../assets/icons/github.png" alt="GitHub" class="icon">
+      </a>
+
+      <a href="https://www.linkedin.com/in/dani-cabello-llenas/" class="social-link">
+        <img src="../assets/icons/linkedin.png" alt="LinkedIn" class="icon">
+      </a>
+
+      <a href="https://www.infojobs.net/candidate/cv/view/index.xhtml?dgv=5218418403400749534" class="social-link">
+        <img src="../assets/icons/infojobs.png" alt="infojobs" class="icon infojobs">
+      </a>
+
+      <a href="https://www.facebook.com/dani.cabello.9469/" class="social-link">
+        <img src="../assets/icons/facebook.png" alt="Facebook" class="icon">
+      </a>
+    </div>
+
+    <p class="footer-copy">© 2026 Dani.dev</p>
+
+    <p class="contact-line">
+      Email: <a href="mailto:danicabello2912@gmail.com">danicabello2912@gmail.com</a>
+    </p>
+  </footer>
+
+  <script src="../js/hobbies.js"></script>
+  <script src="../js/footer.js"></script>
+
+</body>
+</html>

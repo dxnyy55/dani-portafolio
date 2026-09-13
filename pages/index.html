@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dani.dev</title>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/inicio.css" />
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-logo">Dani.dev</div>
+      <ul class="navbar-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+      </ul>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+      <h1 id="inicio-title">Hola, soy Dani Cabello Llenas</h1>
+      <p id="inicio-subtitle">Bienvenido a mi web.</p>
+      <button id="inicio-button"><a href="sobre-mi.html">Conóceme mejor</a></button>
+    </section>
+
+    <section id="sobre-mi" class="sobre-mi">
+      <div class="sobre-mi-contenedor">
+
+        <div class="sobre-mi-foto">
+          <img src="../assets/img/foto1.jpg" alt="Foto de Dani" />
+        </div>
+
+        <div class="sobre-mi-texto">
+          <h2>Sobre mí</h2>
+          <p>
+            Soy Dani Cabello Llenas, tengo <span id="edad"></span> años y acabo de terminar el ciclo superior desarrollado de aplicaciones web,
+            actualmente me estoy enfocando en lo que me gusta que es la creación y el diseño de dichas paginas web.<br>
+            Pero no me gusta quedarme de brazos cruzados y por ello tambien tengo proyectos propios en los que voy creciendo como dessarollador.<br>
+            En esta web podrás conocer mejor mi trayectoria, mis proyectos y la forma en la que trabajo.
+            
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
+      <div class="footer-socials">
+        <a href="https://github.com/dxnyy55" class="social-link">
+          <img src="../assets/icons/github.png" alt="GitHub" class="icon">
+        </a>
+
+        <a href="https://www.linkedin.com/in/dani-cabello-llenas/" class="social-link">
+          <img src="../assets/icons/linkedin.png" alt="LinkedIn" class="icon">
+        </a>
+
+        <a href="https://www.infojobs.net/candidate/cv/view/index.xhtml?dgv=5218418403400749534" class="social-link">
+          <img src="../assets/icons/infojobs.png" alt="infojobs" class="icon infojobs">
+
+        </a>
+
+        <a href="https://www.facebook.com/dani.cabello.9469/" class="social-link">
+          <img src="../assets/icons/facebook.png" alt="Facebook" class="icon">
+        </a>
+      </div>
+
+      <p class="footer-copy">© 2026 Dani.dev</p>
+      <p class="contact-line">
+        Email: <a href="mailto:danicabello2912@gmail.com">danicabello2912@gmail.com</a>
+      </p>
+
+    </footer>
+
+    <script>
+      function calcularEdad() {
+        const nacimiento = new Date(2004, 12, 29);
+        const hoy = new Date();
+
+        let edad = hoy.getFullYear() - nacimiento.getFullYear();
+
+        // Si aún no ha llegado el cumpleaños este año, resta 1
+        const mesActual = hoy.getMonth();
+        const diaActual = hoy.getDate();
+
+        const mesCumple = nacimiento.getMonth();
+        const diaCumple = nacimiento.getDate();
+
+        if (mesActual < mesCumple || (mesActual === mesCumple && diaActual < diaCumple)) {
+          edad--;
+        }
+
+        document.getElementById("edad").textContent = edad;
+      }
+
+      calcularEdad();
+    </script>
+
+
+    <!-- JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/inicio.js"></script>
+    <script src="../js/footer.js"></script>
+
+  </body>
+</html>

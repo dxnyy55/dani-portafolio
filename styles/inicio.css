@@ -1,0 +1,94 @@
+.inicio {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#inicio-title {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+#inicio-subtitle {
+  font-size: 1.6rem;
+  max-width: 900px;
+  opacity: 0.85;
+  margin-bottom: 5px;
+}
+#inicio-button {
+  background-color: #a855f7; /* morado elegante */
+  color: white;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  /*transition: 0.25s ease;*/
+  margin-top: 25px;
+  display: inline-block;
+}
+
+#inicio-button:hover {
+  background-color: #9333ea;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #a855f7;
+}
+
+/* Para que el enlace dentro del botón se vea bien */
+#inicio-button a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+/* ===========================
+   SOBRE MI
+=========================== */
+
+.sobre-mi {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+.sobre-mi-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.sobre-mi-foto img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #a1a1a1;
+}
+
+.sobre-mi-texto {
+  max-width: 600px;
+}
+
+.sobre-mi-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.sobre-mi-texto p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}

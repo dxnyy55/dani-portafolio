@@ -1,0 +1,543 @@
+/* ===========================
+   HOBBIES
+=========================== */
+
+.hobbies {
+  padding: 60px 20px;
+}
+
+.hobbies-layout {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* ===========================
+   FILTROS LATERALES
+=========================== */
+
+.hobbies-filtros {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -200px;
+  margin-top: 120px;
+  position: relative;
+  left: -20px;
+}
+
+.hobbies-filtros ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-filtros li {
+  margin-bottom: 20px;
+}
+/* ===========================
+   BOTONES FLIP 3D
+=========================== */
+
+.filtro-btn {
+  display: block;
+  width: 150px;
+  height: 50px;
+  perspective: 900px;
+  text-decoration: none;
+}
+
+.filtro-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.filtro-front,
+.filtro-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ===========================
+   COLORES POR CATEGORÍA
+=========================== */
+
+/* GAMES → Azul */
+.filtro-games .filtro-front {
+  background: black;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+.filtro-games .filtro-back {
+  background: #3b82f6;
+  color: black;
+  border: 2px solid black;
+  transform: rotateX(180deg);
+}
+
+/* DEPORTES → Rojo */
+.filtro-deportes .filtro-front {
+  background: black;
+  color: #e63946;
+  border: 2px solid #e63946;
+}
+.filtro-deportes .filtro-back {
+  background: #e63946;
+  color: black;
+  border: 2px solid black;
+  transform: rotateX(180deg);
+}
+
+/* MÚSICA → Amarillo */
+.filtro-musica .filtro-front {
+  background: black;
+  color: #facc15;
+  border: 2px solid #facc15;
+}
+.filtro-musica .filtro-back {
+  background: #facc15;
+  color: black;
+  border: 2px solid black;
+  transform: rotateX(180deg);
+}
+
+/* CINE → Morado */
+.filtro-cine .filtro-front {
+  background: black;
+  color: #a855f7;
+  border: 2px solid #a855f7;
+}
+.filtro-cine .filtro-back {
+  background: #a855f7;
+  color: black;
+  border: 2px solid black;
+  transform: rotateX(180deg);
+}
+
+/* Efecto flip */
+.filtro-btn:hover .filtro-inner {
+  transform: rotateX(180deg);
+}
+
+
+/* ===========================
+   CONTENIDO
+=========================== */
+
+.hobbies-contenido {
+  flex: 1;
+}
+
+.hobby-section {
+  margin-bottom: 60px;
+}
+
+.hobby-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   LISTA DE JUEGOS (GRID)
+=========================== */
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.game-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 20px;
+  align-items: start;
+  padding: 15px 20px;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  background: #0f0f0f;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 12px #4f46e5;
+}
+
+.game-logo-box {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-logo {
+  max-width: 64px;
+  max-height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px #4f46e5);
+}
+
+.game-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-text h3 {
+  margin: 0 0 8px 0;
+  padding: 0;
+  color: #4f46e5;
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+
+.game-text p {
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* ===========================
+   DEPORTES
+=========================== */
+
+.sports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.sport-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 20px;
+  border: 2px solid #e63946;
+  border-radius: 8px;
+  background: #0f0f0f;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sport-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 12px #e63946;
+  cursor: pointer;
+}
+
+.sport-item h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #e63946;
+}
+
+.sport-text {
+  background: #1a1a1a;
+  border: 2px solid #e63946;
+  padding: 12px;
+  border-radius: 6px;
+  color: white;
+  min-height: 70px;
+  line-height: 1.4;
+}
+
+/* ===========================
+   MÚSICA (COLORES CAMBIADOS A AMARILLO)
+=========================== */
+
+.music-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* El <a> ahora es el botón completo */
+.music-link {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 20px;
+  align-items: start;
+  padding: 15px 20px;
+  border: 2px solid #facc15; /* amarillo */
+  border-radius: 8px;
+  background: #0f0f0f;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover del botón */
+.music-link:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 12px #facc15; /* glow amarillo */
+  cursor: pointer;
+}
+
+/* Contenedor de imagen */
+.music-logo-box {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen */
+.music-logo {
+  max-width: 64px;
+  max-height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px #facc15); /* sombra amarilla */
+}
+
+/* Ajuste específico para la imagen de Eladio */
+.music-logo.eladio {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+/* Texto */
+.music-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.4rem;
+  color: #facc15; /* título amarillo */
+}
+
+.music-text p {
+  margin: 0;
+  color: white;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* Efecto hover del botón */
+.music-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 12px #facc15;
+  cursor: pointer;
+}
+
+/* ===========================
+   MÚSICA: Géneros (sin imágenes)
+=========================== */
+
+.musica-section {
+  margin-bottom: 40px;
+}
+
+/* Contenedor de géneros */
+.music-genres {
+  max-width: 900px;
+  margin: 12px 0 24px 0;
+  text-align: left;
+}
+
+/* Título de la subsección */
+.music-genres h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: #facc15; /* amarillo música */
+}
+
+/* Lista de géneros */
+.genres-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Cada item: caja limpia, sin imagen */
+.genre-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #0f0f0f;
+  border: 2px solid rgba(250, 204, 21, 0.12); /* sutil borde amarillo */
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Hover ligero para feedback */
+.genre-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.12);
+  cursor: default;
+}
+
+/* Título del género (más visible) */
+.genre-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #facc15; /* amarillo */
+  letter-spacing: 0.2px;
+}
+
+/* Descripción del género */
+.genre-desc {
+  font-size: 0.98rem;
+  color: #e6e6e6;
+  opacity: 0.9;
+  line-height: 1.45;
+}
+/* ===========================
+   CINE (con carátulas)
+=========================== */
+
+.cine-section {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.cine-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.cine-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 20px;
+  align-items: start;
+  padding: 15px 20px;
+  border: 2px solid #a855f7; /* morado */
+  border-radius: 8px;
+  background: #0f0f0f;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cine-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 12px #a855f7;
+  cursor: pointer;
+}
+
+.cine-cover-box {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cine-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: drop-shadow(0 0 4px #a855f7);
+}
+
+.cine-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.4rem;
+  color: #a855f7;
+}
+
+.cine-text p {
+  margin: 0;
+  color: white;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+
+/* ===========================
+   ANIME
+=========================== */
+
+.anime-section {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.anime-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 900px;
+}
+
+.anime-item {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #0f0f0f;
+  border: 2px solid rgba(34, 197, 94, 0.12); /* sutil verde */
+  color: #e6e6e6;
+  font-weight: 600;
+}
+
+/* ===========================
+   Responsive tweaks
+=========================== */
+
+@media (max-width: 720px) {
+  .music-genres h3 {
+    font-size: 1.05rem;
+  }
+  .genre-item {
+    padding: 10px 12px;
+  }
+  .cine-item, .anime-item {
+    padding: 8px 12px;
+  }
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 720px) {
+  .hobbies-layout {
+    gap: 30px;
+  }
+  .hobbies-filtros {
+    display: none;
+  }
+  .game-item {
+    grid-template-columns: 64px 1fr;
+    padding: 12px 14px;
+  }
+  .game-logo-box {
+    width: 64px;
+    height: 64px;
+  }
+  .game-logo {
+    max-width: 48px;
+    max-height: 48px;
+  }
+  .game-text h3 {
+    font-size: 1.15rem;
+  }
+}
