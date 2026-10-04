@@ -81,3 +81,47 @@
   opacity: 0.85;
   line-height: 1.45;
 }
+
+/* ===========================
+   RESPONSIVE MÓVIL (PROYECTOS)
+=========================== */
+@media (max-width: 768px) {
+  .proyectos-section {
+    margin-bottom: 25px;
+  }
+
+  .proyectos-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .proyectos-section p {
+    font-size: 0.95rem;
+  }
+
+  /* Cambia la tarjeta a 1 sola columna para que encaje limpia en pantallas estrechas */
+  .proyecto-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .proyecto-cover-box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .proyecto-text h3 {
+    font-size: 1.25rem;
+  }
+
+  .proyecto-text h4 {
+    margin: 12px 0 4px 0;
+    font-size: 1.1rem;
+  }
+
+  .proyecto-text p {
+    font-size: 0.95rem;
+  }
+}

@@ -143,3 +143,41 @@ section {
   opacity: 1;
   text-shadow: 0 0 6px #3b82f6;
 }
+
+/* ===========================
+   RESPONSIVE MÓVIL (GLOBAL)
+=========================== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 15px;
+    height: 70px;
+  }
+
+  .navbar-logo {
+    font-size: 1.3rem;
+  }
+
+  .navbar-links {
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .navbar-links a {
+    font-size: 0.85rem;
+  }
+
+  section {
+    min-height: calc(100vh - 70px);
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-socials {
+    gap: 20px;
+  }
+}

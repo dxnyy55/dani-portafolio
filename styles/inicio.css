@@ -92,3 +92,44 @@
   opacity: 0.85;
   line-height: 1.6;
 }
+
+/* ===========================
+   RESPONSIVE MÓVIL (INICIO)
+=========================== */
+@media (max-width: 768px) {
+  #inicio-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  #inicio-subtitle {
+    font-size: 1.1rem;
+  }
+
+  #inicio-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  /* Sección Sobre mí */
+  .sobre-mi-contenedor {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .sobre-mi-foto img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .sobre-mi-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .sobre-mi-texto p {
+    font-size: 1rem;
+  }
+}

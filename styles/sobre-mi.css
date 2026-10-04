@@ -119,9 +119,41 @@
   line-height: 1.4;
 }
 
-/* Responsive */
+/* ===========================================================
+   RESPONSIVE MÓVIL (SOBRE MÍ & DAFO)
+=========================================================== */
 @media (max-width: 768px) {
+  /* Sección Sobre Mí */
+  .sobre-mi-section {
+    padding: 0 15px;
+    margin: 20px auto;
+  }
+
+  .sobre-mi-section h2 {
+    margin-top: 30px; /* Corregido: de 175px a 30px para eliminar el espacio gigante arriba */
+    font-size: 1.4rem;
+  }
+
+  .sobre-mi-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  /* Sección DAFO */
+  .dafo-title {
+    font-size: 1.3rem;
+  }
+
   .dafo-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 sola columna en móvil */
+    gap: 15px;
+  }
+
+  .dafo-fortalezas,
+  .dafo-debilidades,
+  .dafo-oportunidades,
+  .dafo-amenazas {
+    padding: 15px;
   }
 }

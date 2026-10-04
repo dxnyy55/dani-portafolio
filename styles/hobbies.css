@@ -541,3 +541,78 @@
     font-size: 1.15rem;
   }
 }
+
+/* ===========================
+   RESPONSIVE MÓVIL (SECCIONES Y COMPONENTES)
+=========================== */
+@media (max-width: 768px) {
+  /* Contenedores principales */
+  .hobbies {
+    padding: 30px 15px;
+  }
+
+  .hobbies-layout {
+    gap: 20px;
+  }
+
+  .hobbies-filtros {
+    display: none; /* Oculta filtros desalineados en pantallas pequeñas */
+  }
+
+  /* Corrección del margen superior gigante en Sobre Mí */
+  .sobre-mi-section {
+    padding: 0 15px;
+    margin: 20px auto;
+  }
+
+  .sobre-mi-section h2 {
+    margin-top: 30px; /* Reducido de 175px a 30px para evitar huecos en blanco */
+    font-size: 1.4rem;
+  }
+
+  /* Adaptar tarjetas con imágenes a columna única */
+  .cine-item,
+  .proyecto-item,
+  .music-link,
+  .game-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .cine-cover-box {
+    width: 120px;
+    height: 170px;
+    margin-bottom: 10px;
+  }
+
+  .proyecto-cover-box {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .game-logo-box,
+  .music-logo-box {
+    margin-bottom: 10px;
+  }
+
+  .cine-text,
+  .proyecto-text,
+  .music-text,
+  .game-text {
+    text-align: center;
+  }
+
+  .proyecto-text h4 {
+    margin-top: 10px;
+  }
+
+  /* Rejilla DAFO en una sola columna */
+  .dafo-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
