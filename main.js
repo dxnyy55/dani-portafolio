@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Animación de entrada para la sección principal (Hero)
-    gsap.from(".inicio h1, .inicio p, .inicio .btn", {
+    gsap.from(".inicio h1, .inicio p", {
       opacity: 0,
       y: 40,
       duration: 1,
@@ -76,8 +76,8 @@ function initHeroCanvas() {
   let particles = [];
 
   function resize() {
-    width = canvas.width = canvas.parentElement.offsetWidth;
-    height = canvas.height = canvas.parentElement.offsetHeight;
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = canvas.parentElement.offsetHeight || window.innerHeight;
   }
 
   window.addEventListener('resize', resize);
@@ -135,6 +135,8 @@ function initHeroCanvas() {
   animate();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+if (document.readyState === 'complete') {
   initHeroCanvas();
-});
+} else {
+  window.addEventListener('load', initHeroCanvas);
+}
