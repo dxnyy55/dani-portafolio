@@ -3,76 +3,262 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dani.dev</title>
+    <title>Dani.dev | Full Stack Developer</title>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/inicio.css" />
+    <!-- CSS UNIFICADO -->
+    <link rel="stylesheet" href="/style.css" />
   </head>
 
   <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR CON ANCLAJES -->
     <nav class="navbar">
       <div class="navbar-logo">Dani.dev</div>
       <ul class="navbar-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="pages/hobbies.html">Hobbies</a></li>
-        <li><a href="pages/sobre-mi.html">Sobre mí</a></li>
-        <li><a href="pages/proyectos.html">Proyectos</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#skills">Tecnologías</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
 
-    <!-- INICIO -->
+    <!-- 1. SECCIÓN PRINCIPAL (HERO) -->
     <section id="inicio" class="inicio">
-      <h1 id="inicio-title">Hola, soy Dani Cabello Llenas</h1>
-      <p id="inicio-subtitle">Bienvenido a mi web.</p>
-      <button id="inicio-button"><a href="sobre-mi.html">Conóceme mejor</a></button>
+      <!-- Fondo animado interactivo -->
+      <canvas id="hero-canvas"></canvas>
+
+      <h1 id="inicio-title">Desarrollador Full-Stack</h1>
+      <p id="inicio-subtitle">Creación de aplicaciones web robustas de principio a fin</p>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; z-index: 2;">
+        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+        <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+      </div>
     </section>
 
-    <section id="sobre-mi" class="sobre-mi">
-      <div class="sobre-mi-contenedor">
-
-        <div class="sobre-mi-foto">
-          <img src="../assets/img/foto1.jpg" alt="Foto de Dani" />
+    <!-- 2. SECCIÓN DE HABILIDADES / TECNOLOGÍAS -->
+    <section id="skills">
+      <h2>Tecnologías y Herramientas</h2>
+      <p style="color: #888; margin-bottom: 2rem;">Los lenguajes y herramientas que domino para crear webs</p>
+      
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <img src="/assets/icons/HTML5.webp" alt="HTML5">
+          <span>HTML5</span>
         </div>
 
-        <div class="sobre-mi-texto">
-          <h2>Sobre mí</h2>
-          <p>
-            Soy Dani Cabello Llenas, tengo <span id="edad"></span> años y acabo de terminar el ciclo superior desarrollado de aplicaciones web,
-            actualmente me estoy enfocando en lo que me gusta que es la creación y el diseño de dichas paginas web.<br>
-            Pero no me gusta quedarme de brazos cruzados y por ello tambien tengo proyectos propios en los que voy creciendo como dessarollador.<br>
-            En esta web podrás conocer mejor mi trayectoria, mis proyectos y la forma en la que trabajo.
-            
-          </p>
+        <div class="skill-card">
+          <img src="/assets/icons/css.png" alt="CSS3">
+          <span>CSS3</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/js.png" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/react.png" alt="react">
+          <span>React</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/mysql.png" alt="SQL">
+          <span>SQL</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/mongodb.png" alt="MongoDB">
+          <span>MongoDB</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/supabase.png" alt="Supabase">
+          <span>Supabase</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/wordpress.png" alt="WordPress">
+          <span>WordPress</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/virtualbox.png" alt="VirtualBox">
+          <span>VirtualBox</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/github.png" alt="GitHub">
+          <span>GitHub</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/gitkraken.png" alt="GitKraken">
+          <span>GitKraken</span>
+        </div>
+
+        <div class="skill-card">
+          <img src="/assets/icons/figma.png" alt="Figma">
+          <span>Figma</span>
         </div>
 
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer id="footer" class="footer">
+    <!-- 3. SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi">
+      <div class="sobre-mi-contenedor">
+
+        <div class="sobre-mi-foto">
+          <img src="/assets/img/foto1.jpg" alt="Foto de Dani Cabello" />
+        </div>
+
+        <div class="sobre-mi-texto">
+          <h2>Sobre mí</h2>
+          <p>
+            Soy Dani Cabello Llenas, tengo <span id="edad"></span> años y he completado el ciclo superior de <strong>Desarrollo de Aplicaciones Web (DAW)</strong>.<br><br>
+            Me apasiona la creación de páginas web interactivas y dinámicas. Domino tecnologías como HTML, CSS, XML, JavaScript y SQL, además de trabajar con bases de datos como MongoDB y Supabase, gestores de contenido como WordPress y herramientas de virtualización y desarrollo.
+          </p>
+        </div>
+      </div>
+
+      <!-- APARTADO DAFO -->
+      <div style="max-width: 1100px; margin: 6rem auto 0 auto; padding-top: 4rem;">
+        <h3 style="text-align: center; color: #fff; font-size: 2rem; margin-bottom: 2.5rem; text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);">Análisis DAFO Profesional</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          
+          <!-- FORTALEZAS -->
+          <div style="background: #14151a; border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 12px; padding: 1.8rem; box-shadow: 0 0 15px rgba(34, 197, 94, 0.05);">
+            <h4 style="color: #22c55e; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">Fortalezas</h4>
+            <ul style="color: #b0b0b0; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem;">
+              <li>Sólida formación técnica en DAW (Desarrollo de Aplicaciones Web).</li>
+              <li>Capacidad Full Stack: dominio de Frontend, Backend, Bases de Datos y despliegue.</li>
+              <li>Constancia y proactividad en proyectos reales en producción (InfoTek y PlaySport).</li>
+            </ul>
+          </div>
+
+          <!-- DEBILIDADES -->
+          <div style="background: #14151a; border: 1px solid rgba(234, 179, 8, 0.3); border-radius: 12px; padding: 1.8rem; box-shadow: 0 0 15px rgba(234, 179, 8, 0.05);">
+            <h4 style="color: #eab308; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">Debilidades</h4>
+            <ul style="color: #b0b0b0; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem;">
+              <li>Poca experiencia previa de forma profesional.</li>
+              <li>Me cuesta bastante comprender y adaptarme al código cuando no es mío, y no tiene comentarios.</li>
+            </ul>
+          </div>
+
+          <!-- AMENAZAS -->
+          <div style="background: #14151a; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 1.8rem; box-shadow: 0 0 15px rgba(239, 68, 68, 0.05);">
+            <h4 style="color: #ef4444; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">Amenazas</h4>
+            <ul style="color: #b0b0b0; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem;">
+              <li>Alta competitividad en el sector tecnológico de desarrollo web junior.</li>
+              <li>Evolución tecnológica constante que exige reciclaje formativo diario.</li>
+            </ul>
+          </div>
+
+          <!-- OPORTUNIDADES -->
+          <div style="background: #14151a; border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; padding: 1.8rem; box-shadow: 0 0 15px rgba(59, 130, 246, 0.05);">
+            <h4 style="color: #3b82f6; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">Oportunidades</h4>
+            <ul style="color: #b0b0b0; font-size: 0.95rem; line-height: 1.6; padding-left: 1.2rem;">
+              <li>Alta demanda de desarrolladores Full Stack en el mercado.</li>
+              <li>Crecimiento del trabajo remoto y proyectos tecnológicos globales.</li>
+              <li>Despliegue y visibilidad de proyectos propios innovadores como PlaySport.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 4. SECCIÓN PROYECTOS -->
+    <section id="proyectos">
+      <h2>Mis Proyectos</h2>
+      <p style="color: #888; margin-bottom: 2rem;">Aplicaciones y proyectos en producción y desarrollo</p>
+
+      <div class="proyectos-grid">
+        
+        <!-- PROYECTO 1: INFOTEK -->
+        <div class="proyecto-card">
+          <div class="proyecto-img-container">
+            <img src="/assets/img/infotek.png" alt="InfoTek Web" class="proyecto-img">
+          </div>
+          <div style="padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap;">
+              <span style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">EN PRODUCCIÓN</span>
+              <span style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">⚡ Plan gratuito (tarda unos segundos en arrancar)</span>
+            </div>
+            
+            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">InfoTek Web</h3>
+            <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              Plataforma web enfocada en servicios e información tecnológica. Cuenta con arquitectura cliente-servidor completa y diseño dinámico.
+            </p>
+
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="background: rgba(255,255,255,0.05); color: #ccc; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">Full Stack</span>
+              <span style="background: rgba(255,255,255,0.05); color: #ccc; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">MongoDB</span>
+              <span style="background: rgba(255,255,255,0.05); color: #ccc; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">Render</span>
+            </div>
+          </div>
+
+          <div style="padding: 1rem 1.8rem; background: rgba(0,0,0,0.25); border-top: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem;">
+            <a href="https://github.com/dxnyy55" target="_blank" style="color: #a0a0a0; text-decoration: none; font-size: 0.95rem; font-weight: 500;">📂 Código GitHub</a>
+            <a href="https://infotek-web.onrender.com/" target="_blank" style="color: #3b82f6; text-decoration: none; font-size: 0.95rem; font-weight: 600; text-shadow: 0 0 8px rgba(59, 130, 246, 0.4);">🌐 Ver Demo en Vivo</a>
+          </div>
+        </div>
+
+        <!-- PROYECTO 2: PLAYSPORT -->
+        <div class="proyecto-card" style="border-style: dashed; opacity: 0.9;">
+          <div class="proyecto-img-container">
+            <img src="/assets/img/playsport.png" alt="PlaySport" class="proyecto-img">
+          </div>
+          <div style="padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap;">
+              <span style="background: rgba(234, 179, 8, 0.15); color: #eab308; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600;">EN DESARROLLO</span>
+            </div>
+            
+            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">PlaySport</h3>
+            <p style="color: #a0a0a0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">
+              Proximo proyecto personal, basado en una red social dedica exclusivamente al deporte, donde la gente pueda subir fotos o videos practicando ese deporte.
+            </p>
+
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="background: rgba(255,255,255,0.05); color: #ccc; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">Supabase</span>
+              <span style="background: rgba(255,255,255,0.05); color: #ccc; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">Node.js</span>
+            </div>
+          </div>
+
+          <div style="padding: 1rem 1.8rem; background: rgba(0,0,0,0.25); border-top: 1px solid rgba(255,255,255,0.05);">
+            <span style="color: #666; font-size: 0.9rem; font-style: italic;">Próximamente disponible...</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. FOOTER / CONTACTO -->
+    <footer id="contacto">
       <div class="footer-socials">
-        <a href="https://github.com/dxnyy55" class="social-link">
-          <img src="../assets/icons/github.png" alt="GitHub" class="icon">
+        <a href="https://github.com/dxnyy55" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+          <img src="/assets/icons/github.png" alt="GitHub" class="social-icon">
         </a>
 
-        <a href="https://www.linkedin.com/in/dani-cabello-llenas/" class="social-link">
-          <img src="../assets/icons/linkedin.png" alt="LinkedIn" class="icon">
+        <a href="https://www.linkedin.com/in/dani-cabello-llenas/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+          <img src="/assets/icons/linkedin.png" alt="LinkedIn" class="social-icon">
         </a>
 
-        <a href="https://www.infojobs.net/candidate/cv/view/index.xhtml?dgv=5218418403400749534" class="social-link">
-          <img src="../assets/icons/infojobs.png" alt="infojobs" class="icon infojobs">
-
+        <a href="https://www.infojobs.net/candidate/cv/view/index.xhtml?dgv=5218418403400749534" target="_blank" rel="noopener noreferrer" class="social-link" title="InfoJobs">
+          <img src="/assets/icons/infojobs.png" alt="InfoJobs" class="social-icon infojobs-icon">
         </a>
 
-        <a href="https://www.facebook.com/dani.cabello.9469/" class="social-link">
-          <img src="../assets/icons/facebook.png" alt="Facebook" class="icon">
+        <a href="https://www.facebook.com/dani.cabello.9469/" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
+          <img src="/assets/icons/facebook.png" alt="Facebook" class="social-icon">
         </a>
       </div>
 
@@ -80,38 +266,10 @@
       <p class="contact-line">
         Email: <a href="mailto:danicabello2912@gmail.com">danicabello2912@gmail.com</a>
       </p>
-
     </footer>
 
-    <script>
-      function calcularEdad() {
-        const nacimiento = new Date(2004, 12, 29);
-        const hoy = new Date();
-
-        let edad = hoy.getFullYear() - nacimiento.getFullYear();
-
-        // Si aún no ha llegado el cumpleaños este año, resta 1
-        const mesActual = hoy.getMonth();
-        const diaActual = hoy.getDate();
-
-        const mesCumple = nacimiento.getMonth();
-        const diaCumple = nacimiento.getDate();
-
-        if (mesActual < mesCumple || (mesActual === mesCumple && diaActual < diaCumple)) {
-          edad--;
-        }
-
-        document.getElementById("edad").textContent = edad;
-      }
-
-      calcularEdad();
-    </script>
-
-
-    <!-- JS -->
-    <script src="../js/main.js"></script>
-    <script src="../js/inicio.js"></script>
-    <script src="../js/footer.js"></script>
+    <!-- JS UNIFICADO EN LA RAÍZ -->
+    <script src="/main.js"></script>
 
   </body>
 </html>
